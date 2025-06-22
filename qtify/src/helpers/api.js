@@ -21,3 +21,23 @@ export const fetchNewAlbums = async () => {
     throw error;
   }
 };
+
+export const fetchSongs = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/songs`);
+    return response.data;
+  } catch (error) {
+    console.error("Error fetching songs:", error);
+    throw error;
+  }
+};
+
+export const fetchGenres = async () => {
+  try {
+    const response = await axios.get(`${API_BASE_URL}/genres`);
+    return response.data.data;
+  } catch (error) {
+    console.error("Error fetching genres:", error);
+    throw error;
+  }
+};

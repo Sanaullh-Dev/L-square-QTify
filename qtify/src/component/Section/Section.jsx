@@ -5,7 +5,7 @@ import Carousel from "../Carousel/Carousel";
 import styles from "./Section.module.css";
 
 function Section({ title, data, loading, error }) {
-  const [isCollapsed, setIsCollapsed] = useState(false);
+  const [isCollapsed, setIsCollapsed] = useState(true);
 
   const handleCollapseToggle = () => {
     setIsCollapsed(!isCollapsed);

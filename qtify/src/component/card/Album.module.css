@@ -45,10 +45,10 @@
 }
 
 .albumInfo {
-  height: 35px;
+  min-height: 35px;
   padding: 6px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
@@ -58,9 +58,10 @@
   font-weight: 400;
   padding-top: 10px;
   color: var(--color-text);
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
   width: 100%;
   font-family: poppins, sans-serif;
+  line-height: 1.2;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  hyphens: auto;
 }
