@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button } from "@mui/material";
 import Album from "../card/Album";
+import Carousel from "../Carousel/Carousel";
 import styles from "./Section.module.css";
 
 function Section({ title, data, loading, error }) {
@@ -8,6 +9,10 @@ function Section({ title, data, loading, error }) {
 
   const handleCollapseToggle = () => {
     setIsCollapsed(!isCollapsed);
+  };
+
+  const renderAlbumCard = (albumData) => {
+    return <Album albumData={albumData} />;
   };
 
   return (
@@ -26,12 +31,21 @@ function Section({ title, data, loading, error }) {
       {loading && <p className={styles.loadingText}>Loading...</p>}
       {error && <p className={styles.errorText}>{error}</p>}
       
-      {!isCollapsed && !loading && !error && (
-        <div className={styles.grid}>
-          {data.map((album) => (
-            <Album key={album.id} albumData={album} />
-          ))}
-        </div>
+      {!loading && !error && (
+        <>
+          {isCollapsed ? (
+            <Carousel 
+              data={data} 
+              renderComponent={renderAlbumCard}
+            />
+          ) : (
+            <div className={styles.grid}>
+              {data.map((album) => (
+                <Album key={album.id} albumData={album} />
+              ))}
+            </div>
+          )}
+        </>
       )}
     </div>
   );

@@ -1,0 +1,116 @@
+.carouselContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.swiperWrapper {
+  flex: 1;
+  overflow: hidden;
+  position: relative;
+}
+
+.swiper {
+  width: 97%;
+  height: auto;
+  overflow: visible;
+}
+
+.slide {
+  width: auto !important;
+  height: auto;
+}
+
+.navButton {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background-color: var(--color-primary);
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  z-index: 10;
+  flex-shrink: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.navButton:hover {
+  background-color: var(--color-primary);
+  color: white;
+  transform: translateY(-50%) scale(1.1);
+  box-shadow: 0 4px 12px rgba(52, 201, 75, 0.4);
+}
+
+.navButton:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+}
+
+.prevButton {
+  left: 0;
+}
+
+.nextButton {
+  right: 0;
+}
+
+.navButton svg {
+  width: 16px;
+  height: 16px;
+}
+
+@media (max-width: 768px) {
+  .carouselContainer {
+    padding: 0 32px 0 12px;
+  }
+  
+  .navButton {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .navButton svg {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .prevButton {
+    left: 0;
+  }
+
+  .nextButton {
+    right: 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .carouselContainer {
+    padding: 0 28px 0 8px;
+  }
+  
+  .navButton {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .navButton svg {
+    width: 12px;
+    height: 12px;
+  }
+  
+  .prevButton {
+    left: 0;
+  }
+
+  .nextButton {
+    right: 0;
+  }
+}
