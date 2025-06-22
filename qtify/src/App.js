@@ -1,4 +1,5 @@
 import './App.css';
+import './index.css';
 import Hero from './component/Hero/Hero';
 import Navbar from './component/Navbar/Navbar';
 
