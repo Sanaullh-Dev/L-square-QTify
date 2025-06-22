@@ -1,8 +1,11 @@
 import React from "react";
 
 export default function Feedback() {
-  return (    <button
+  return (
+    <button
       style={{
+        fontFamily:
+          "Poppins, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen'",
         backgroundColor: "var(--color-background)",
         color: "var(--color-primary)",
         border: "1px solid var(--color-primary)",
