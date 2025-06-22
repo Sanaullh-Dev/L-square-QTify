@@ -37,3 +37,27 @@
     transform: rotate(360deg);
   }
 }
+
+.albumsSection {
+  padding: 20px;
+}
+
+.albumsTitle {
+  color: var(--color-text);
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.loadingText {
+  color: var(--color-text);
+}
+
+.errorText {
+  color: var(--color-error);
+}
+
+.albumsGrid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}

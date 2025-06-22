@@ -1,0 +1,66 @@
+.card {
+  width: 159px;
+  height: 205px;
+  background-color: var(--color-text);
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+}
+
+.imageContainer {
+  position: relative;
+  height: 170px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.albumImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px 10px 0 0;
+}
+
+.chipContainer {
+  position: absolute;
+  bottom: 6px;
+  right: 6px;
+  font-family: poppins, sans-serif;
+}
+
+.chip {
+  background-color: var(--color-secondary) !important;
+  color: var(--color-text) !important;
+  font-size: 10px !important;
+  height: 23px !important;
+  border-radius: 10px !important;
+  font-weight: 400 !important;
+}
+
+.albumInfo {
+  height: 35px;
+  padding: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.albumName {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  padding-top: 10px;
+  color: var(--color-text);
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+  font-family: poppins, sans-serif;
+}
